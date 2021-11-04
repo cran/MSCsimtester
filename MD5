@@ -1,0 +1,16 @@
+ff62ea527d1da683def3a80b93e823bc *DESCRIPTION
+46feffc2efcba8fdc2b234a0d8eff31c *LICENSE
+07af4d435a3042d524d1a0350257b3e7 *NAMESPACE
+4334d461cfba4015422546a45281ecc1 *R/MSCsimtester.R
+8d040b5ac306a4799fd1ab6b0ae6e0bf *build/partial.rdb
+3c440ec0fbf75a639ec82585b27a3619 *inst/REFERENCES.bib
+24a6e251a71284e4465b59245d2bda62 *inst/extdata/genetreeSample
+28076729f5bc6d3d215f85294059abe4 *man/ADtest.Rd
+8eb55170ba1dc38e88e9181cb4cb037c *man/MSCsimtester.Rd
+7120cf47196197ddc91f7d45e1ed0ba0 *man/genetreeSample.Rd
+509155b6ae47e092809f619f82306d98 *man/pairwiseDist.Rd
+1de96a46765f5ace46d7a58837dc77c9 *man/plotEdgeOrder.Rd
+68dc2ab0aa8b5f2ca78030b5ab2b6d9c *man/plotPops.Rd
+9523ef75760c5d59a14e8e68e948bb9c *man/print.ADtestOutput.Rd
+6b650292b7f7c2b80a3cee6e831fb9ea *man/print.rootedTripleOutput.Rd
+cf3f5cf70f38f37253450a271ef0a34f *man/rootedTriple.Rd
