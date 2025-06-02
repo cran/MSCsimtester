@@ -2,6 +2,7 @@
 % Please edit documentation in R/MSCsimtester.R
 \docType{package}
 \name{MSCsimtester}
+\alias{MSCsimtester-package}
 \alias{MSCsimtester}
 \title{Validity tests of simulators of the multspecies coalescent model in phylogenomics.}
 \description{
@@ -18,8 +19,18 @@ with edge lengths in generations, together with constant population sizes for ea
 
 \code{MSCsimtester} builds on the packages \code{ape} and \code{kSamples}.
 
-For further examples of use and citation purposes, see \insertCite{testing19}{MSCsimtester}.
+For further examples of use and citation purposes, see \insertRef{2022allman-MSCsimtester}{MSCsimtester}.
 }
 \references{
-\insertRef{testing19}{MSCsimtester}
+\insertRef{2022allman-MSCsimtester}{MSCsimtester}
+}
+\author{
+\strong{Maintainer}: Elizabeth Allman \email{e.allman@alaska.edu} [copyright holder]
+
+Authors:
+\itemize{
+  \item Hector Banos \email{hbassnos@gmail.com} [copyright holder]
+  \item John Rhodes \email{j.rhodes@alaska.edu} [copyright holder]
+}
+
 }

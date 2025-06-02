@@ -11,7 +11,8 @@ pairwiseDist(
   taxon1,
   taxon2,
   numSteps = 1000,
-  tailProb = 0.01
+  tailProb = 0.01,
+  numBreaks = 40
 )
 }
 \arguments{
@@ -35,7 +36,9 @@ from \code{taxon1}.}
 graphing the theoretical pairwise distance density.  Default is \code{numSteps = 1000}.
 A larger value produces a smoother plot.}
 
-\item{tailProb}{A cutoff value, between 0 and 1, for the theoretical density, with a default of 0.01.
+\item{tailProb}{A cutoff value, between 0 and 1, for the theoretical density, with a default of 0.01.}
+
+\item{numBreaks}{Number of breaks in histogram.  Default is \code{numBreaks = 40}.
 The theoretical pairwise distance is plotted from (0, xMax), where  xMax
 is the larger of the maximum pairwise distance in the gene tree sample and the value cutting off
 a tail of area \code{tailProb} under the pdf. A message returns the proportion of sample distances in this tail.}

@@ -11,7 +11,7 @@ A text file with 10,000 metric Newick gene trees on the taxa a,b,c,d,e
 A dataset of 10,000 gene trees on 5 taxa simulated under the MSC on a species tree.
 }
 \details{
-This simulated dataset was produced by SimPhy \insertCite{simphy}{MSCsimtester},
+This simulated dataset was produced by SimPhy \insertRef{2016Mallo-simphy}{MSCsimtester},
 using the species tree
 
 ((((a:10000,b:10000):10000,c:20000):10000,d:30000):10000,e:40000);
@@ -28,5 +28,5 @@ using the ape command:
 \code{gts=read.tree(file=system.file("extdata","genetreeSample",package="MSCsimtester") )}
 }
 \references{
-\insertRef{simphy}{MSCsimtester}
+\insertRef{2016Mallo-simphy}{MSCsimtester}
 }

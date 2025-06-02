@@ -54,5 +54,5 @@ ADtest(distDen,1000) }
 
 }
 \seealso{
-\code{\link{pairwiseDist}}, \code{\link{kSamples-package}}
+\code{\link{pairwiseDist}}
 }

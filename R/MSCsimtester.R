@@ -12,10 +12,10 @@
 #'
 #' \code{MSCsimtester} builds on the packages \code{ape} and \code{kSamples}.
 #'
-#' For further examples of use and citation purposes, see \insertCite{testing19}{MSCsimtester}.
+#' For further examples of use and citation purposes, see \insertRef{2022allman-MSCsimtester}{MSCsimtester}.
 #'
 #' @references
-#' \insertRef{testing19}{MSCsimtester}
+#' \insertRef{2022allman-MSCsimtester}{MSCsimtester}
 #'
 #' @docType package
 #' @name MSCsimtester
@@ -23,8 +23,8 @@
 #' @import stats ape kSamples
 #' @importFrom graphics hist lines plot
 #' @importFrom Rdpack reprompt
+#' @importFrom methods is
 NULL
-
 
 #' Plot species tree, with edge numbers on edges.
 #'
@@ -152,6 +152,7 @@ plotPops = function(stree, populations)
 #' graphing the theoretical pairwise distance density.  Default is \code{numSteps = 1000}.
 #' A larger value produces a smoother plot.
 #' @param tailProb A cutoff value, between 0 and 1, for the theoretical density, with a default of 0.01.
+#' @param numBreaks Number of breaks in histogram.  Default is \code{numBreaks = 40}.
 #' The theoretical pairwise distance is plotted from (0, xMax), where  xMax
 #' is the larger of the maximum pairwise distance in the gene tree sample and the value cutting off
 #' a tail of area \code{tailProb} under the pdf. A message returns the proportion of sample distances in this tail.
@@ -175,7 +176,8 @@ pairwiseDist = function(stree,
                         taxon1,
                         taxon2,
                         numSteps = 1000,
-                        tailProb = .01)
+                        tailProb = .01,
+                        numBreaks = 40)
 {
   # some initial (limited) checks
 
@@ -191,7 +193,7 @@ pairwiseDist = function(stree,
   }
 
   # Check that a vector of numeric constant pop sizes was entered
-  if (class(popSizes) != "numeric") {
+  if (!is.numeric(class(popSizes))) {
     warning("Population sizes must be numeric. Exiting.")
     return(invisible())
   }
@@ -222,7 +224,7 @@ pairwiseDist = function(stree,
   }
 
   # create an empirical histogram for full sample for plotting later
-  hg = hist(sampleDist, plot = FALSE, breaks = 100)
+  hg = hist(sampleDist, plot = FALSE, breaks = numBreaks)
 
   # Create and plot theoretical pdf
 
@@ -404,7 +406,7 @@ pairwiseDist = function(stree,
 #' ADtest(distDen)
 #' ADtest(distDen,1000) }
 #'
-#' @seealso \code{\link{pairwiseDist}}, \code{\link{kSamples-package}}
+#' @seealso \code{\link{pairwiseDist}}
 #'
 #' @export
 #'
@@ -522,8 +524,6 @@ ADtest = function(distanceDensities, subsampleSize = FALSE)
 }
 
 
-
-
 #' Compare expected and sample frequencies of topological rooted triples.
 #'
 #' For a given species tree with population sizes, compares the expected frequencies
@@ -585,7 +585,7 @@ rootedTriple = function(stree,
     return(invisible())
   }
 
-  if (class(popSizes) != "numeric") {
+  if (!is.numeric(class(popSizes)))  {
     warning("Population sizes must be numeric. Exiting.")
     return(invisible())
   }
@@ -810,7 +810,7 @@ invertPopSize = function(pp)
 
 #' @export
 print.ADtestOutput <- function(x, ...) {
-  if (class(x$Adtest) == "kSamples") {
+  if (is(x$Adtest,"kSamples")) {
     print(x$Adtest)
   }
   else{
@@ -841,7 +841,7 @@ print.rootedTripleOutput <- function(x, ...) {
 #'
 #' A dataset of 10,000 gene trees on 5 taxa simulated under the MSC on a species tree.
 #'
-#' @details This simulated dataset was produced by SimPhy \insertCite{simphy}{MSCsimtester},
+#' @details This simulated dataset was produced by SimPhy \insertRef{2016Mallo-simphy}{MSCsimtester},
 #' using the species tree
 #'
 #' ((((a:10000,b:10000):10000,c:20000):10000,d:30000):10000,e:40000);
@@ -864,7 +864,7 @@ print.rootedTripleOutput <- function(x, ...) {
 #' @format A text file with 10,000 metric Newick gene trees on the taxa a,b,c,d,e
 #'
 #' @references
-#' \insertRef{simphy}{MSCsimtester}
+#' \insertRef{2016Mallo-simphy}{MSCsimtester}
 #'
 NULL
 
