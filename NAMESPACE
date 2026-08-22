@@ -11,7 +11,9 @@ import(ape)
 import(kSamples)
 import(stats)
 importFrom(Rdpack,reprompt)
-importFrom(graphics,hist)
-importFrom(graphics,lines)
-importFrom(graphics,plot)
+importFrom(graphics,
+  hist,
+  lines,
+  plot
+)
 importFrom(methods,is)

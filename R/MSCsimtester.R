@@ -17,14 +17,11 @@
 #' @references
 #' \insertRef{2022allman-MSCsimtester}{MSCsimtester}
 #'
-#' @docType package
-#' @name MSCsimtester
-#'
 #' @import stats ape kSamples
 #' @importFrom graphics hist lines plot
 #' @importFrom Rdpack reprompt
 #' @importFrom methods is
-NULL
+"_PACKAGE"
 
 #' Plot species tree, with edge numbers on edges.
 #'
@@ -193,7 +190,7 @@ pairwiseDist = function(stree,
   }
 
   # Check that a vector of numeric constant pop sizes was entered
-  if (!is.numeric(class(popSizes))) {
+  if (!is.numeric(popSizes)) {
     warning("Population sizes must be numeric. Exiting.")
     return(invisible())
   }
@@ -585,7 +582,7 @@ rootedTriple = function(stree,
     return(invisible())
   }
 
-  if (!is.numeric(class(popSizes)))  {
+  if (!is.numeric(popSizes))  {
     warning("Population sizes must be numeric. Exiting.")
     return(invisible())
   }

@@ -1,7 +1,7 @@
 Package: MSCsimtester
 Type: Package
 Title: Tests of Multispecies Coalescent Gene Tree Simulator Output
-Version: 1.1
+Version: 1.2
 Authors@R: c(
   person("Elizabeth", "Allman", email = "e.allman@alaska.edu", role = c("aut", "cre", "cph")),
   person("Hector", "Banos", email = "hbassnos@gmail.com", role = c("aut", "cph")),
@@ -13,11 +13,11 @@ Imports: Rdpack, kSamples, graphics, stats, methods
 RdMacros: Rdpack
 Depends: R(>= 2.10),ape(>= 5.0)
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+Config/roxygen2/version: 8.1.0
 NeedsCompilation: no
-Packaged: 2025-05-07 16:52:23 UTC; eallman
+Packaged: 2026-08-22 00:39:06 UTC; eallman
 Author: Elizabeth Allman [aut, cre, cph],
   Hector Banos [aut, cph],
   John Rhodes [aut, cph]
 Repository: CRAN
-Date/Publication: 2025-06-02 09:00:02 UTC
+Date/Publication: 2026-08-22 02:50:02 UTC
